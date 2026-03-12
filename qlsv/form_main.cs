@@ -15,7 +15,7 @@ namespace qlsv
     {
         string connectionString = @"Data Source=DESKTOP-787HRO1;Initial Catalog=qlsv_csharp;User ID=sa;Password=123456";
 
-        public form_main()
+        public form_main() 
         {
             InitializeComponent();
 

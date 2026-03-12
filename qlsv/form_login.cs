@@ -12,7 +12,7 @@ namespace qlsv
 {
     public partial class form_login : Form
     {
-        public form_login()
+        public form_login() 
         {
             InitializeComponent();
         }
