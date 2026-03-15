@@ -102,7 +102,6 @@
             this.btn_refresh.TabIndex = 4;
             this.btn_refresh.Text = "Làm mới";
             this.btn_refresh.UseVisualStyleBackColor = true;
-            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // btn_update
             // 
@@ -121,7 +120,6 @@
             this.btn_delete.TabIndex = 4;
             this.btn_delete.Text = "Xóa";
             this.btn_delete.UseVisualStyleBackColor = true;
-            this.btn_delete.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_add
             // 
@@ -131,7 +129,6 @@
             this.btn_add.TabIndex = 4;
             this.btn_add.Text = "Thêm";
             this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbx_sex
             // 
@@ -144,7 +141,6 @@
             this.cbx_sex.Name = "cbx_sex";
             this.cbx_sex.Size = new System.Drawing.Size(238, 21);
             this.cbx_sex.TabIndex = 3;
-            this.cbx_sex.SelectedIndexChanged += new System.EventHandler(this.cbx_sex_SelectedIndexChanged);
             cbx_sex.SelectedIndex = 0;
             // 
             // dateTimePicker1
@@ -155,7 +151,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(238, 20);
             this.dateTimePicker1.TabIndex = 2;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // tbx_id
             // 
@@ -163,7 +158,6 @@
             this.tbx_id.Name = "tbx_id";
             this.tbx_id.Size = new System.Drawing.Size(238, 20);
             this.tbx_id.TabIndex = 1;
-            this.tbx_id.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbx_class
             // 
@@ -171,7 +165,6 @@
             this.tbx_class.Name = "tbx_class";
             this.tbx_class.Size = new System.Drawing.Size(238, 20);
             this.tbx_class.TabIndex = 1;
-            this.tbx_class.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbx_name
             // 
@@ -179,7 +172,6 @@
             this.tbx_name.Name = "tbx_name";
             this.tbx_name.Size = new System.Drawing.Size(238, 20);
             this.tbx_name.TabIndex = 1;
-            this.tbx_name.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lbl_id
             // 
@@ -189,7 +181,6 @@
             this.lbl_id.Size = new System.Drawing.Size(67, 13);
             this.lbl_id.TabIndex = 0;
             this.lbl_id.Text = "Mã sinh viên";
-            this.lbl_id.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbl_name
             // 
@@ -199,7 +190,6 @@
             this.lbl_name.Size = new System.Drawing.Size(54, 13);
             this.lbl_name.TabIndex = 0;
             this.lbl_name.Text = "Họ và tên";
-            this.lbl_name.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbl_date
             // 
@@ -209,7 +199,6 @@
             this.lbl_date.Size = new System.Drawing.Size(54, 13);
             this.lbl_date.TabIndex = 0;
             this.lbl_date.Text = "Ngày sinh";
-            this.lbl_date.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbl_class
             // 
@@ -219,7 +208,6 @@
             this.lbl_class.Size = new System.Drawing.Size(25, 13);
             this.lbl_class.TabIndex = 0;
             this.lbl_class.Text = "Lớp";
-            this.lbl_class.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbl_sex
             // 
@@ -229,7 +217,6 @@
             this.lbl_sex.Size = new System.Drawing.Size(47, 13);
             this.lbl_sex.TabIndex = 0;
             this.lbl_sex.Text = "Giới tính";
-            this.lbl_sex.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbl_info
             // 
@@ -255,7 +242,6 @@
             this.dtg_list.RowHeadersVisible = false;
             this.dtg_list.Size = new System.Drawing.Size(504, 429);
             this.dtg_list.TabIndex = 5;
-            this.dtg_list.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_list_CellContentClick);
             // 
             // button5
             // 
@@ -272,7 +258,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(414, 20);
             this.textBox4.TabIndex = 1;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lbl_search
             // 
@@ -282,7 +267,6 @@
             this.lbl_search.Size = new System.Drawing.Size(165, 13);
             this.lbl_search.TabIndex = 0;
             this.lbl_search.Text = "Tìm kiếm (Tên/Mã sinh viên/Lớp)";
-            this.lbl_search.Click += new System.EventHandler(this.label2_Click);
             // 
             // id
             // 
