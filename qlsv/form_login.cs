@@ -22,7 +22,7 @@ namespace qlsv
             string username = tbx_username.Text;
             string password = tbx_password.Text;
 
-            if (username == "huypv" && password == "0014368")
+            if (username == "h" && password == "1")
             {
                 form_main  mainForm = new form_main();
                 mainForm.FormClosed += (s, args) => this.Close();

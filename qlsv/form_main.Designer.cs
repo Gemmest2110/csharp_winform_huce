@@ -33,10 +33,10 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
+            this.cbx_class = new System.Windows.Forms.ComboBox();
             this.cbx_sex = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tbx_id = new System.Windows.Forms.TextBox();
-            this.tbx_class = new System.Windows.Forms.TextBox();
             this.tbx_name = new System.Windows.Forms.TextBox();
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
@@ -45,14 +45,20 @@
             this.lbl_sex = new System.Windows.Forms.Label();
             this.lbl_info = new System.Windows.Forms.Label();
             this.dtg_list = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.lbl_search = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button5 = new System.Windows.Forms.Button();
+            this.tbx_search = new System.Windows.Forms.TextBox();
+            this.lbl_search = new System.Windows.Forms.Label();
+            this.btn_mnclass = new System.Windows.Forms.Button();
+            this.lbl_page = new System.Windows.Forms.Label();
+            this.btn_lastleft = new System.Windows.Forms.Button();
+            this.btn_left = new System.Windows.Forms.Button();
+            this.btn_lastright = new System.Windows.Forms.Button();
+            this.btn_right = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -72,10 +78,10 @@
             this.splitContainer1.Panel1.Controls.Add(this.btn_update);
             this.splitContainer1.Panel1.Controls.Add(this.btn_delete);
             this.splitContainer1.Panel1.Controls.Add(this.btn_add);
+            this.splitContainer1.Panel1.Controls.Add(this.cbx_class);
             this.splitContainer1.Panel1.Controls.Add(this.cbx_sex);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker1);
             this.splitContainer1.Panel1.Controls.Add(this.tbx_id);
-            this.splitContainer1.Panel1.Controls.Add(this.tbx_class);
             this.splitContainer1.Panel1.Controls.Add(this.tbx_name);
             this.splitContainer1.Panel1.Controls.Add(this.lbl_id);
             this.splitContainer1.Panel1.Controls.Add(this.lbl_name);
@@ -86,9 +92,15 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.btn_right);
+            this.splitContainer1.Panel2.Controls.Add(this.btn_lastright);
+            this.splitContainer1.Panel2.Controls.Add(this.btn_left);
+            this.splitContainer1.Panel2.Controls.Add(this.btn_lastleft);
+            this.splitContainer1.Panel2.Controls.Add(this.lbl_page);
             this.splitContainer1.Panel2.Controls.Add(this.dtg_list);
+            this.splitContainer1.Panel2.Controls.Add(this.btn_mnclass);
             this.splitContainer1.Panel2.Controls.Add(this.button5);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox4);
+            this.splitContainer1.Panel2.Controls.Add(this.tbx_search);
             this.splitContainer1.Panel2.Controls.Add(this.lbl_search);
             this.splitContainer1.Size = new System.Drawing.Size(800, 505);
             this.splitContainer1.SplitterDistance = 266;
@@ -130,6 +142,18 @@
             this.btn_add.Text = "Thêm";
             this.btn_add.UseVisualStyleBackColor = true;
             // 
+            // cbx_class
+            // 
+            this.cbx_class.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_class.FormattingEnabled = true;
+            this.cbx_class.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbx_class.Location = new System.Drawing.Point(15, 291);
+            this.cbx_class.Name = "cbx_class";
+            this.cbx_class.Size = new System.Drawing.Size(238, 21);
+            this.cbx_class.TabIndex = 3;
+            // 
             // cbx_sex
             // 
             this.cbx_sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -141,7 +165,6 @@
             this.cbx_sex.Name = "cbx_sex";
             this.cbx_sex.Size = new System.Drawing.Size(238, 21);
             this.cbx_sex.TabIndex = 3;
-            cbx_sex.SelectedIndex = 0;
             // 
             // dateTimePicker1
             // 
@@ -156,15 +179,9 @@
             // 
             this.tbx_id.Location = new System.Drawing.Point(15, 58);
             this.tbx_id.Name = "tbx_id";
+            this.tbx_id.ReadOnly = true;
             this.tbx_id.Size = new System.Drawing.Size(238, 20);
             this.tbx_id.TabIndex = 1;
-            // 
-            // tbx_class
-            // 
-            this.tbx_class.Location = new System.Drawing.Point(15, 291);
-            this.tbx_class.Name = "tbx_class";
-            this.tbx_class.Size = new System.Drawing.Size(238, 20);
-            this.tbx_class.TabIndex = 1;
             // 
             // tbx_name
             // 
@@ -240,24 +257,54 @@
             this.dtg_list.Location = new System.Drawing.Point(14, 64);
             this.dtg_list.Name = "dtg_list";
             this.dtg_list.RowHeadersVisible = false;
-            this.dtg_list.Size = new System.Drawing.Size(504, 429);
+            this.dtg_list.Size = new System.Drawing.Size(504, 390);
             this.dtg_list.TabIndex = 5;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "stu_id";
+            this.id.HeaderText = "Mã SV";
+            this.id.Name = "id";
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "stu_name";
+            this.name.HeaderText = "Họ và tên";
+            this.name.Name = "name";
+            // 
+            // sex
+            // 
+            this.sex.DataPropertyName = "stu_gender";
+            this.sex.HeaderText = "Giới tính";
+            this.sex.Name = "sex";
+            // 
+            // date
+            // 
+            this.date.DataPropertyName = "stu_date";
+            this.date.HeaderText = "Ngày sinh";
+            this.date.Name = "date";
+            // 
+            // lop
+            // 
+            this.lop.DataPropertyName = "class_name";
+            this.lop.HeaderText = "Lớp";
+            this.lop.Name = "lop";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(434, 37);
+            this.button5.Location = new System.Drawing.Point(307, 27);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 20);
+            this.button5.Size = new System.Drawing.Size(84, 31);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Tìm";
+            this.button5.Text = "Tìm kiếm";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // tbx_search
             // 
-            this.textBox4.Location = new System.Drawing.Point(14, 37);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(414, 20);
-            this.textBox4.TabIndex = 1;
+            this.tbx_search.Location = new System.Drawing.Point(14, 37);
+            this.tbx_search.Name = "tbx_search";
+            this.tbx_search.Size = new System.Drawing.Size(287, 20);
+            this.tbx_search.TabIndex = 1;
             // 
             // lbl_search
             // 
@@ -268,35 +315,59 @@
             this.lbl_search.TabIndex = 0;
             this.lbl_search.Text = "Tìm kiếm (Tên/Mã sinh viên/Lớp)";
             // 
-            // id
+            // btn_mnclass
             // 
-            this.id.DataPropertyName = "mssv";
-            this.id.HeaderText = "Mã SV";
-            this.id.Name = "id";
+            this.btn_mnclass.Location = new System.Drawing.Point(397, 27);
+            this.btn_mnclass.Name = "btn_mnclass";
+            this.btn_mnclass.Size = new System.Drawing.Size(121, 30);
+            this.btn_mnclass.TabIndex = 4;
+            this.btn_mnclass.Text = "Quản lý lớp học";
+            this.btn_mnclass.UseVisualStyleBackColor = true;
             // 
-            // name
+            // lbl_page
             // 
-            this.name.DataPropertyName = "hoten";
-            this.name.HeaderText = "Họ và tên";
-            this.name.Name = "name";
+            this.lbl_page.AutoSize = true;
+            this.lbl_page.Location = new System.Drawing.Point(216, 472);
+            this.lbl_page.Name = "lbl_page";
+            this.lbl_page.Size = new System.Drawing.Size(107, 13);
+            this.lbl_page.TabIndex = 6;
+            this.lbl_page.Text = "Trang 1/1 | 0 bản ghi";
             // 
-            // sex
+            // btn_lastleft
             // 
-            this.sex.DataPropertyName = "gioitinh";
-            this.sex.HeaderText = "Giới tính";
-            this.sex.Name = "sex";
+            this.btn_lastleft.Location = new System.Drawing.Point(35, 460);
+            this.btn_lastleft.Name = "btn_lastleft";
+            this.btn_lastleft.Size = new System.Drawing.Size(51, 37);
+            this.btn_lastleft.TabIndex = 7;
+            this.btn_lastleft.Text = "<<";
+            this.btn_lastleft.UseVisualStyleBackColor = true;
             // 
-            // date
+            // btn_left
             // 
-            this.date.DataPropertyName = "ngaysinh";
-            this.date.HeaderText = "Ngày sinh";
-            this.date.Name = "date";
+            this.btn_left.Location = new System.Drawing.Point(92, 460);
+            this.btn_left.Name = "btn_left";
+            this.btn_left.Size = new System.Drawing.Size(51, 37);
+            this.btn_left.TabIndex = 7;
+            this.btn_left.Text = "<";
+            this.btn_left.UseVisualStyleBackColor = true;
             // 
-            // lop
+            // btn_lastright
             // 
-            this.lop.DataPropertyName = "lop";
-            this.lop.HeaderText = "Lớp";
-            this.lop.Name = "lop";
+            this.btn_lastright.Location = new System.Drawing.Point(439, 460);
+            this.btn_lastright.Name = "btn_lastright";
+            this.btn_lastright.Size = new System.Drawing.Size(51, 37);
+            this.btn_lastright.TabIndex = 7;
+            this.btn_lastright.Text = ">>";
+            this.btn_lastright.UseVisualStyleBackColor = true;
+            // 
+            // btn_right
+            // 
+            this.btn_right.Location = new System.Drawing.Point(382, 460);
+            this.btn_right.Name = "btn_right";
+            this.btn_right.Size = new System.Drawing.Size(51, 37);
+            this.btn_right.TabIndex = 7;
+            this.btn_right.Text = ">";
+            this.btn_right.UseVisualStyleBackColor = true;
             // 
             // form_main
             // 
@@ -330,19 +401,25 @@
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.TextBox tbx_class;
         private System.Windows.Forms.Label lbl_date;
         private System.Windows.Forms.Label lbl_class;
         private System.Windows.Forms.Button btn_refresh;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbx_search;
         private System.Windows.Forms.DataGridView dtg_list;
         private System.Windows.Forms.Label lbl_search;
+        private System.Windows.Forms.ComboBox cbx_class;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn sex;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewTextBoxColumn lop;
+        private System.Windows.Forms.Button btn_mnclass;
+        private System.Windows.Forms.Button btn_lastright;
+        private System.Windows.Forms.Button btn_left;
+        private System.Windows.Forms.Button btn_lastleft;
+        private System.Windows.Forms.Label lbl_page;
+        private System.Windows.Forms.Button btn_right;
     }
 }
